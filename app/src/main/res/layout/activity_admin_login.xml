@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_admin_login.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔐" android:textSize="64sp" android:layout_marginTop="60dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Admin Panel" android:textColor="#FFFFFF"
+            android:textSize="28sp" android:textStyle="bold" android:layout_marginTop="8dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Silai Management Console"
+            android:textColor="#9E9E9E" android:textSize="14sp" android:layout_marginBottom="40dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Admin Username" android:layout_marginBottom="16dp"
+            app:boxStrokeColor="#FF5722" app:hintTextColor="#FF5722">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdminUsername"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text" android:textColor="#FFFFFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Admin Password" android:layout_marginBottom="32dp"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="#FF5722" app:hintTextColor="#FF5722">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdminPassword"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPassword" android:textColor="#FFFFFF"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAdminLogin"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="LOGIN AS ADMIN" android:textSize="15sp" android:textStyle="bold"
+            app:backgroundTint="#FF5722" app:cornerRadius="8dp"/>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="← Back to User Login"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="#9E9E9E" android:layout_marginTop="16dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Default: admin / 1234"
+            android:textColor="#616161" android:textSize="12sp" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</ScrollView>

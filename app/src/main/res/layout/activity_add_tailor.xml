@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_add_tailor.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="#FF5722" android:padding="16dp"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <Button android:id="@+id/btnBack" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="← Back"
+                android:backgroundTint="#E64A19" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="➕ Add New Tailor"
+                android:textColor="#FFFFFF" android:textSize="18sp"
+                android:textStyle="bold" android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Tailor Name *" android:layout_marginBottom="14dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Area Spinner -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Area *" android:textSize="13sp" android:textColor="#757575"
+                android:layout_marginBottom="4dp"/>
+            <Spinner android:id="@+id/spinnerArea"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:background="@drawable/spinner_bg"
+                android:padding="8dp" android:layout_marginBottom="14dp"/>
+
+            <!-- Rating -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Rating (e.g. 4.5) *" android:layout_marginBottom="14dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRating"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Image URL -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Image URL (https://...)" android:layout_marginBottom="14dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etImageUrl"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textUri"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Address" android:layout_marginBottom="14dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" android:minLines="2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Description / Specialization" android:layout_marginBottom="14dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textMultiLine" android:minLines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Phone Number" android:layout_marginBottom="24dp"
+                app:boxStrokeColor="#FF5722">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveTailor"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="✅  SAVE TAILOR" android:textSize="16sp" android:textStyle="bold"
+                app:backgroundTint="#FF5722" app:cornerRadius="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

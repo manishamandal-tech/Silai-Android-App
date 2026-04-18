@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_tailor_placeholder.xml
+    ==========================
+    Vector drawable used as placeholder image while Glide loads tailor photos.
+    A simple person silhouette on a pink background.
+
+    VIVA TIP:
+    - Vector drawables are resolution-independent (no pixelation on any screen)
+    - They replace multiple PNG sizes (ldpi/mdpi/hdpi/xhdpi) with one XML file
+    - Used in Glide: .placeholder(R.drawable.ic_tailor_placeholder)
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Pink background circle -->
+    <path
+        android:fillColor="#FCE4EC"
+        android:pathData="M0,0 L100,0 L100,100 L0,100 Z" />
+
+    <!-- Person head -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M50,20 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+    <!-- Person body -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M25,80 Q25,55 50,55 Q75,55 75,80 Z" />
+
+    <!-- Scissors icon (small) at bottom right -->
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M65,68 L72,75 L68,75 L65,72 Z" />
+    <path
+        android:fillColor="#F48FB1"
+        android:pathData="M75,68 L68,75 L72,75 L75,72 Z" />
+
+</vector>

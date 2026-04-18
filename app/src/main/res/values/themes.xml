@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    themes.xml
+    ===========
+    Defines app-wide styles/themes.
+
+    VIVA TIP:
+    - Theme.MaterialComponents = Google's Material Design theme
+    - We override colorPrimary (toolbar, buttons) and colorAccent (floating buttons, switches)
+    - NoActionBar style hides the default toolbar (we use custom headers instead)
+    - All activities reference these themes via AndroidManifest.xml
+-->
+<resources>
+
+    <!-- Main app theme — pink Material Design -->
+    <style name="Theme.SilaiApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- No ActionBar variant (used for Splash, Login, Admin Login) -->
+    <style name="Theme.SilaiApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+
+    <!-- Admin dark theme variant -->
+    <style name="Theme.SilaiApp.Admin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/admin_accent</item>
+        <item name="colorPrimaryDark">#BF360C</item>
+        <item name="colorAccent">@color/admin_accent</item>
+        <item name="android:statusBarColor">@color/admin_dark</item>
+        <item name="android:windowBackground">@color/admin_dark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

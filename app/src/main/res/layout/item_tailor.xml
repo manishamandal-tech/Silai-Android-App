@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_tailor.xml
+    ================
+    Layout for a SINGLE item in the tailor RecyclerView list.
+    CardView gives shadow/rounded corners.
+    Contains: tailor image, name, area, rating bar.
+
+    VIVA TIP: This XML is inflated once per visible item by TailorAdapter.onCreateViewHolder()
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Tailor Profile Image -->
+        <ImageView
+            android:id="@+id/ivTailor"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:scaleType="centerCrop"
+            android:background="#F8BBD0"
+            android:src="@drawable/ic_tailor_placeholder"/>
+
+        <!-- Text Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/tvTailorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tailor Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+
+            <TextView
+                android:id="@+id/tvTailorArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Area"
+                android:textSize="13sp"
+                android:textColor="#757575"
+                android:layout_marginTop="3dp"/>
+
+            <!-- Rating Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:isIndicator="true"
+                    android:progressTint="#E91E63"/>
+
+                <TextView
+                    android:id="@+id/tvTailorRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#E91E63"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Arrow indicator -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="28sp"
+            android:textColor="#E91E63"
+            android:layout_marginEnd="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Pink bottom accent bar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:background="#FCE4EC"/>
+
+</androidx.cardview.widget.CardView>

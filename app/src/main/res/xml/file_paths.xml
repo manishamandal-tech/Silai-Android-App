@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    file_paths.xml
+    ===============
+    Required by FileProvider (declared in AndroidManifest.xml).
+    Tells Android which directories our app is allowed to share files from.
+
+    VIVA TIP:
+    - FileProvider is required on Android 7.0+ (API 24) to share file URIs with other apps.
+    - Without this, taking a camera photo and getting its URI would throw a FileUriExposedException.
+    - external-files-path = app's external storage folder (e.g. /sdcard/Android/data/com.silai.app/)
+    - name = alias (used internally)
+    - path = subdirectory within external files dir
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- For camera photo output: getExternalFilesDir(Environment.DIRECTORY_PICTURES) -->
+    <external-files-path
+        name="my_images"
+        path="Pictures/" />
+
+    <!-- Also allow app's internal cache dir (for some devices) -->
+    <cache-path
+        name="my_cache"
+        path="." />
+
+</paths>

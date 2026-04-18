@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_login.xml
+    ===================
+    Login screen with username, password fields.
+    Uses Material TextInputLayout for modern outlined text fields.
+    ScrollView ensures layout works on small screens too.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal">
+
+        <!-- Top Curved Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#E91E63"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✂️"
+                android:textSize="52sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silai"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginTop="28dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login to book your tailor"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginBottom="28dp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Username Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+            app:boxStrokeColor="#E91E63">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:imeOptions="actionNext"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginBottom="28dp"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="#E91E63">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="LOGIN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#E91E63"
+            app:cornerRadius="8dp"/>
+
+        <!-- Register Link -->
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Register Now"
+            android:textColor="#E91E63"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Admin Login Link -->
+        <TextView
+            android:id="@+id/tvAdminLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔐  Admin Panel Login"
+            android:textColor="#9E9E9E"
+            android:textSize="13sp"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

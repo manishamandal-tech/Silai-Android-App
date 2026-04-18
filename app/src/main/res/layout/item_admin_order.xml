@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#2D2D2D">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Row 1: Order ID + Status -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvOrderId"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Order #1"
+                android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Pickup Scheduled" android:textSize="11sp"
+                android:textStyle="bold" android:padding="6dp"
+                android:background="#424242"/>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#424242" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView android:id="@+id/tvUserTailor"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="User #1 → Reshma Tailor"
+            android:textColor="#BDBDBD" android:textSize="13sp"/>
+
+        <TextView android:id="@+id/tvClothDate"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Kurta | 12/04/2025"
+            android:textColor="#9E9E9E" android:textSize="12sp"
+            android:layout_marginTop="3dp"/>
+
+        <TextView android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="" android:textColor="#757575" android:textSize="12sp"
+            android:layout_marginTop="3dp" android:visibility="gone"/>
+
+        <!-- Update Status Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdateStatus"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="🔄  Update Status"
+            android:textSize="13sp"
+            app:backgroundTint="#FF5722"
+            app:cornerRadius="8dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

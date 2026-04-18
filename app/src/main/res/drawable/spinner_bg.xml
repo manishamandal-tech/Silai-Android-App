@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    spinner_bg.xml
+    ===============
+    Custom background drawable for Spinner (dropdown) widgets.
+    Gives a rounded border appearance consistent with Material TextInputLayouts.
+
+    VIVA TIP: Drawable XML files define shapes, gradients, and selectors.
+    <shape> = a rectangle/oval/line/ring
+    <stroke> = border
+    <corners> = rounded corners
+    <solid>   = fill color
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FFFFFF" />
+
+    <stroke
+        android:width="1.5dp"
+        android:color="#E0E0E0" />
+
+    <corners android:radius="8dp" />
+
+    <padding
+        android:bottom="6dp"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="6dp" />
+
+</shape>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml
+    ====================
+    Splash screen layout. Full-screen branded screen shown on app launch.
+    Background color = primary pink (#E91E63).
+    Contains: scissors emoji, app name, tagline, loading spinner.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E91E63"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- App Icon (emoji scissors) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✂️"
+        android:textSize="90sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silai"
+        android:textColor="#FFFFFF"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:fontFamily="sans-serif-light"/>
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Smart Tailor at Your Doorstep"
+        android:textColor="#FFCDD2"
+        android:textSize="16sp"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Decorative line -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Sub text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📍 Find • Book • Get Delivered"
+        android:textColor="#F8BBD0"
+        android:textSize="14sp"/>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:indeterminate="true"
+        android:indeterminateTint="#FFFFFF"
+        android:layout_marginTop="60dp"/>
+
+</LinearLayout>
